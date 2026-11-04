@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { findProduct, products } from "@/data/products";
 import { PRODUCT_DETAILS, DEFAULT_DETAIL } from "@/data/product-details";
 import { ProductViewer } from "@/components/product-viewer";
+import { ProductHeroScroll } from "@/components/product-hero-scroll";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -50,7 +51,8 @@ export default async function ProductDetailPage({ params }: Props) {
 
   return (
     <div className="pdm">
-      {/* ============ HERO ============ */}
+      {/* ============ HERO（滚动旋转交互，复刻 caponata 页 product-hero） ============ */}
+      <ProductHeroScroll>
       <section className="pdm__hero">
         <h1 className="pdm__title">{product.name}</h1>
         <div className="pdm__media">
