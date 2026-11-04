@@ -1135,3 +1135,88 @@ body:has(.fruit-slider--nature) .site-menu-toggle:hover .site-menu-toggle__pill 
 
 /* 8) 锚点跳转避开固定 header */
 .pantry-category { scroll-margin-top: 140px; }
+
+/* ---------- Pantry search ---------- */
+.pantry-search {
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--container-padding) var(--space-s);
+  min-height: 3.5rem;
+}
+.pantry-search__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: min(520px, 100%);
+  background: var(--color-cream-dark);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.65rem 2.75rem 0.65rem 2.75rem;
+  transition: border-color 0.25s var(--ease-soft), background 0.25s var(--ease-soft);
+}
+.pantry-search__field:focus-within {
+  border-color: var(--color-orange);
+  background: var(--color-white);
+}
+.pantry-search__icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--color-brown);
+  pointer-events: none;
+}
+.pantry-search__input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-border-brand);
+}
+.pantry-search__input::placeholder { color: var(--color-brown); opacity: 0.6; }
+.pantry-search__input::-webkit-search-cancel-button { display: none; }
+.pantry-search__clear {
+  position: absolute;
+  right: 0.9rem;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-border-brand);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.25s var(--ease-soft);
+}
+.pantry-search__clear:hover { background: var(--color-orange); }
+
+.pantry-empty {
+  text-align: center;
+  padding: var(--space-xl, 8rem) var(--container-padding);
+}
+.pantry-empty__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-medium);
+  color: var(--color-border-brand);
+  margin: 0 0 1.25rem;
+}
+.pantry-empty__reset {
+  border: 1px solid var(--color-orange);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-orange);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.25s var(--ease-soft), color 0.25s var(--ease-soft);
+}
+.pantry-empty__reset:hover {
+  background: var(--color-orange);
+  color: var(--color-white);
+}
