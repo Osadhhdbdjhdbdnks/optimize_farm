@@ -4,6 +4,7 @@ import { findProduct, products } from "@/data/products";
 import { PRODUCT_DETAILS, DEFAULT_DETAIL } from "@/data/product-details";
 import { ProductViewer } from "@/components/product-viewer";
 import { ProductHeroScroll } from "@/components/product-hero-scroll";
+import { OtherProducts } from "@/components/other-products";
 
 type Props = { params: Promise<{ slug: string }> };
 
